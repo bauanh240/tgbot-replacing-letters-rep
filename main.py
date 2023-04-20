@@ -9,3 +9,5 @@ def replace_letter(update, context):
 
 from telegram.ext import MessageHandler, Filters
 
+replace_letter_handler = MessageHandler(Filters.text & (~Filters.command), replace_letter)
+dispatcher.add_handler(replace_letter_handler)
